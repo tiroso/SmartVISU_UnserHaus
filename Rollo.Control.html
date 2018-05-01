@@ -1,0 +1,451 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+<h1><img class="icon" src='{{ icon0 }}fts_shutter_30.svg'/>Rollo Steuerung</h1>
+
+<div class="block">
+	<div class="set-3" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Allgemein</h3>
+			<table width=100%>
+				<tr>
+                    <td width=20%>
+						Alle Rollos
+					</td>
+					<td>
+						<span data-role="controlgroup" data-type="horizontal"> 
+							{{ basic.button('XX.HIO.VCCU.4.sw', 'XX.HIO.VCCU.4.sw', '', 'control_arrow_up.svg', 'press short', 'mini') }}
+						</span>
+						<span data-role="controlgroup" data-type="horizontal"> 
+							{{ basic.button('XX.HIO.VCCU.5.sw', 'XX.HIO.VCCU.5.sw', '', 'control_arrow_down.svg', 'press short', 'mini') }}
+						</span>
+					</td>
+				</tr>
+                <tr>
+                    <td>
+						Alle&nbsp;Rollos im&nbsp;Erdgeschoss
+					</td>
+					<td>
+						<span data-role="controlgroup" data-type="horizontal"> 
+							{{ basic.button('XX.HIO.VCCU.8.sw', 'XX.HIO.VCCU.8.sw', '', 'control_arrow_up.svg', 'press short', 'mini') }}
+						</span>
+						<span data-role="controlgroup" data-type="horizontal"> 
+							{{ basic.button('XX.HIO.VCCU.9.sw', 'XX.HIO.VCCU.9.sw', '', 'control_arrow_down.svg', 'press short', 'mini') }}
+						</span>
+					</td>
+				</tr>
+                <tr>
+                    <td>
+						Alle&nbsp;Rollos im&nbsp;1.&nbsp;Obergeschoss
+					</td>
+					<td>
+						<span data-role="controlgroup" data-type="horizontal"> 
+							{{ basic.button('XX.HIO.VCCU.10.sw', 'XX.HIO.VCCU.10.sw', '', 'control_arrow_up.svg', 'press short', 'mini') }}
+						</span>
+						<span data-role="controlgroup" data-type="horizontal"> 
+							{{ basic.button('XX.HIO.VCCU.11.sw', 'XX.HIO.VCCU.11.sw', '', 'control_arrow_down.svg', 'press short', 'mini') }}
+						</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Wohnzimmer</h3>
+			<table width=100%>
+                <tr>
+                    <td>
+                        Linkes&nbsp;Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('WZ.RA.1.hoch', 'WZ.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('WZ.RA.1.runter', 'WZ.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('WZ.RA.1.stop', 'WZ.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#wz1pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="wz1pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('WZ.RA.1.pct1', 'WZ.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct2', 'WZ.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct3', 'WZ.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct4', 'WZ.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct5', 'WZ.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('WZ.RA.1.pct6', 'WZ.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct7', 'WZ.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct8', 'WZ.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct9', 'WZ.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('WZ.RA.1.pct10', 'WZ.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rechtes&nbsp;Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('WZ.RA.2.hoch', 'WZ.RA.2.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('WZ.RA.2.runter', 'WZ.RA.2.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('WZ.RA.2.stop', 'WZ.RA.2.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#wz2pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="wz2pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('WZ.RA.2.pct1', 'WZ.RA.2.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct2', 'WZ.RA.2.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct3', 'WZ.RA.2.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct4', 'WZ.RA.2.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct5', 'WZ.RA.2.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('WZ.RA.2.pct6', 'WZ.RA.2.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct7', 'WZ.RA.2.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct8', 'WZ.RA.2.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct9', 'WZ.RA.2.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('WZ.RA.2.pct10', 'WZ.RA.2.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Küche</h3>
+			<table width=100%>
+                <tr>
+                    <td>
+                        Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('KU.RA.1.hoch', 'KU.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('KU.RA.1.runter', 'KU.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('KU.RA.1.stop', 'KU.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#ku1pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="ku1pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KU.RA.1.pct1', 'KU.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct2', 'KU.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct3', 'KU.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct4', 'KU.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct5', 'KU.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KU.RA.1.pct6', 'KU.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct7', 'KU.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct8', 'KU.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct9', 'KU.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('KU.RA.1.pct10', 'KU.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Emmas Zimmer</h3>
+			<table width=100%>
+                <tr>
+                    <td>
+                        Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('KZ1.RA.1.hoch', 'KZ1.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('KZ1.RA.1.runter', 'KZ1.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('KZ1.RA.1.stop', 'KZ1.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#kz11pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="kz11pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KZ1.RA.1.pct1', 'KZ1.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct2', 'KZ1.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct3', 'KZ1.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct4', 'KZ1.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct5', 'KZ1.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KZ1.RA.1.pct6', 'KZ1.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct7', 'KZ1.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct8', 'KZ1.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct9', 'KZ1.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('KZ1.RA.1.pct10', 'KZ1.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Paulas Zimmer</h3>
+			<table width=100%>
+                <tr>
+                    <td>
+                        Linkes&nbsp;Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('KZ2.RA.1.hoch', 'KZ2.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('KZ2.RA.1.runter', 'KZ2.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('KZ2.RA.1.stop', 'KZ2.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#kz21pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="kz21pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KZ2.RA.1.pct1', 'KZ2.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct2', 'KZ2.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct3', 'KZ2.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct4', 'KZ2.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct5', 'KZ2.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KZ2.RA.1.pct6', 'KZ2.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct7', 'KZ2.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct8', 'KZ2.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct9', 'KZ2.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('KZ2.RA.1.pct10', 'KZ2.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rechtes&nbsp;Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('KZ2.RA.2.hoch', 'KZ2.RA.2.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('KZ2.RA.2.runter', 'KZ2.RA.2.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('KZ2.RA.2.stop', 'KZ2.RA.2.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#kz22pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="kz22pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KZ2.RA.2.pct1', 'KZ2.RA.2.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct2', 'KZ2.RA.2.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct3', 'KZ2.RA.2.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct4', 'KZ2.RA.2.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct5', 'KZ2.RA.2.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('KZ2.RA.2.pct6', 'KZ2.RA.2.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct7', 'KZ2.RA.2.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct8', 'KZ2.RA.2.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct9', 'KZ2.RA.2.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('KZ2.RA.2.pct10', 'KZ2.RA.2.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Ankleidezimmer</h3>
+			<table width=100%>
+                <tr>
+                    <td>
+                        Rollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('AKZ.RA.1.hoch', 'AKZ.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('AKZ.RA.1.runter', 'AKZ.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('AKZ.RA.1.stop', 'AKZ.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#akz1pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="akz1pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('AKZ.RA.1.pct1', 'AKZ.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct2', 'AKZ.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct3', 'AKZ.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct4', 'AKZ.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct5', 'AKZ.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('AKZ.RA.1.pct6', 'AKZ.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct7', 'AKZ.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct8', 'AKZ.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct9', 'AKZ.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('AKZ.RA.1.pct10', 'AKZ.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Flur</h3><h3 align=left>
+			<table width=100%>
+                <tr>
+                    <td>
+                        Gartenrollo
+                    </td>
+                    <td>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            {{ basic.button('FL.RA.1.hoch', 'FL.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+                            {{ basic.button('FL.RA.1.runter', 'FL.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+                            {{ basic.button('FL.RA.1.stop', 'FL.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+                        </span>
+                        <span data-role="controlgroup" data-type="horizontal"> 
+                            <a href="#fl1pct" data-rel="popup">
+                                <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                            </a>
+                            <div id="fl1pct" data-role="popup">
+                                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('FL.RA.1.pct1', 'FL.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct2', 'FL.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct3', 'FL.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct4', 'FL.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct5', 'FL.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span data-role="controlgroup" data-type="horizontal"> 
+                                                {{ basic.button('FL.RA.1.pct6', 'FL.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct7', 'FL.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct8', 'FL.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct9', 'FL.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                {{ basic.button('FL.RA.1.pct10', 'FL.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </td>
+                </tr>
+			</table>
+		</div>
+
+	</div>
+</div>
+
+
+{% endblock %}
+

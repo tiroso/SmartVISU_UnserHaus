@@ -1,0 +1,190 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% import "multimedia.html" as multimedia %}
+
+{% block content %}
+
+
+<div data-role="navbar">
+		<ul>
+			<li>
+				<a href="index.php?page=EG.Wohnzimmer" id="WohnzimmerStandart">
+					<div >
+						<div><img class="icon" style="width:24px;height:24px;" src='{{ icon0 }}scene_livingroom.svg'/></div> 
+						<div style="font-size:16px;">Wohnzimmer </div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="index.php?page=EG.WZMultimedia" class="ui-btn-active" id="WohzimmerMultimedia">
+					<div style="padding:0px;" >
+						<div><img class="icon" style="width:24px;height:24px;" src='{{ icon0 }}it_television.svg'/></div> 
+						<div style="font-size:16px;">Multimedia </div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+<h1><img class="icon" src='{{ icon0 }}scene_livingroom.svg'/>Wohnzimmer</h1>
+
+ <div class="block">
+	 <div class="set-3" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		 <div data-role="collapsible" data-collapsed="false" >
+
+			  <h3>XBMC Basic Control</h3>
+
+		</div>
+		<div data-role="collapsible" data-collapsed="true" >
+
+			  <h3>Sender</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Fern1', 'EG.movie.id', 'pics/station/pro7.png', '1', 'midi') }}
+							{{ multimedia.station('Fern2', 'EG.movie.id', 'pics/station/vox.png', '2', 'midi') }}	
+							{{ multimedia.station('Fern3', 'EG.movie.id', 'pics/station/kabel1.png', '3', 'midi') }}		
+							{{ multimedia.station('Fern4', 'EG.movie.id', 'pics/station/rtl.png', '4', 'midi') }}				
+						</td>
+					</tr>
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Fern5', 'EG.movie.id', 'pics/station/rtl2.png', '5', 'midi') }}
+							{{ multimedia.station('Fern6', 'EG.movie.id', 'pics/station/das_erste.png', '6', 'midi') }}	
+							{{ multimedia.station('Fern7', 'EG.movie.id', 'pics/station/zdf.png', '7', 'midi') }}	
+							{{ multimedia.station('Fern8', 'EG.movie.id', 'pics/station/sat1.png', '8', 'midi') }}						
+						</td>
+					</tr>
+				</table>
+
+		</div>
+		<div data-role="collapsible" data-collapsed="true" >
+
+			  <h3>Bev. Filme</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Movie1', 'EG.movie.id', 'pics/movie/frozen.png', '8717418419738', 'midi') }}
+							{{ multimedia.station('Movie2', 'EG.movie.id', 'pics/movie/frozen_party.png', 1, 'midi') }}				
+						</td>
+					</tr>
+				</table>
+
+		</div>
+		<div data-role="collapsible" data-collapsed="true" >
+
+			  <h3>Bev. Serien</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Serie1', 'EG.movie.id', 'pics/movie/peppa.png', '4006448753290', 'midi') }}
+							{{ multimedia.station('Serie2', 'EG.movie.id', 'pics/movie/findus.png', '4029758265888', 'midi') }}				
+						</td>
+					</tr>
+				</table>
+
+		</div>
+	</div>
+</div>
+
+<div class="block">
+	 <div class="set-3" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		 <div data-role="collapsible" data-collapsed="false" >
+
+			  <h3>SONOS Basic Control</h3>
+<table>
+<tr>
+<td>
+<br>
+{{ basic.slider('Sonos.WZ.Lautstaerke', 'Sonos.WZ.Lautstaerke', 0, 100, 2, 'bottomup') }}
+<br>
+</td>
+<td>
+{{ basic.value('Sonos.WZ.Value.Album', 'Sonos.WZ.Value.Album') }}<br>
+{{ basic.value('Sonos.WZ.Value.Artist', 'Sonos.WZ.Value.Artist') }}{{ basic.value('Sonos.WZ.Value.Sender', 'Sonos.WZ.Value.Sender') }}<br>
+{{ basic.value('Sonos.WZ.Value.Title', 'Sonos.WZ.Value.Title') }}{{ basic.value('Sonos.WZ.Value.SenderInfo', 'Sonos.WZ.Value.SenderInfo') }}<br>
+<hr>
+<span data-role="controlgroup" data-type="horizontal"> 
+{{ basic.button('Sonos.WZ.Prev', 'Sonos.WZ.Prev', '', 'control_arrow_left.svg', '', 'mini', 'icon0') }}
+{{ basic.dual('Sonos.WZ.Play', 'Sonos.WZ.Play', 'audio_play.svg', 'audio_play.svg', 'PLAYING', '', 'mini') }}
+{{ basic.dual('Sonos.WZ.Pause', 'Sonos.WZ.Pause', 'audio_pause.svg', 'audio_pause.svg', 'PAUSED_PLAYBACK', '', 'mini') }}
+{{ basic.dual('Sonos.WZ.Stop', 'Sonos.WZ.Stop', 'audio_stop.svg', 'audio_stop.svg', 'STOPPED', '', 'mini') }}
+{{ basic.button('Sonos.WZ.Next', 'Sonos.WZ.Next', '', 'control_arrow_right.svg', '', 'mini', 'icon0') }}
+</span>
+
+<span data-role="controlgroup" data-type="horizontal"> 
+{{ basic.button('Sonos.WZ.VolUp', 'Sonos.WZ.VolUp', 'VolUp', 'plus', '', 'mini', 'icon0') }}
+{{ basic.dual('Sonos.WZ.Mute', 'Sonos.WZ.Mute', 'audio_volume_mute.svg', 'audio_volume_mute.svg', '1', '0', 'mini') }}
+{{ basic.button('Sonos.WZ.VolDown', 'Sonos.WZ.VolDown', 'VolDown', 'minus', '', 'mini', 'icon0') }}
+{{ basic.dual('Sonos.WZ.Repeat', 'Sonos.WZ.Repeat', 'audio_repeat.svg', 'audio_repeat.svg', '1', '0', 'mini') }}
+{{ basic.dual('Sonos.WZ.Shuffle', 'Sonos.WZ.Shuffle', 'audio_shuffle.svg', 'audio_shuffle.svg', '1', '0', 'mini') }}
+</span>
+
+</td>
+</tr>
+</table>
+
+		</div>
+		<div data-role="collapsible" data-collapsed="true" >
+
+			  <h3>Radiosender</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Sonos1', 'Sonos.WZ.Play.Radio', 'pics/radio/radiobob.png', 'RADIO%20BOB!', 'midi') }}
+							{{ multimedia.station('Sonos2', 'Sonos.WZ.Play.Radio', 'pics/radio/einslive.png', '1LIVE%20-%20Das%20junge%20Radio%20des%20WDR.', 'midi') }}	
+							{{ multimedia.station('Sonos3', 'Sonos.WZ.Play.Radio', 'pics/radio/swr3.png', 'SWR3%20Elchradio', 'midi') }}		
+							{{ multimedia.station('Sonos4', 'Sonos.WZ.Play.Radio', 'pics/radio/radiobonnrheinsieg.png', 'Radio%20Bonn/Rhein-Sieg', 'midi') }}				
+						</td>
+					</tr>
+				</table>
+
+		</div>
+		<div data-role="collapsible" data-collapsed="true" >
+
+			  <h3>Alben</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Sonos5', 'Sonos.WZ.Play.Album', 'pics/movie/frozen.png', 'Albums /(?i)Die.Eiskönigin.*völlig.unverfroren/ .*/.*/.* 50-', 'midi') }}	
+							{{ multimedia.station('Sonos6', 'Sonos.WZ.Play.Album', 'pics/movie/rapunzel.png', 'Albums /(?i)rapunzel.*/ .*/.*/.* 50-', 'midi') }}			
+						</td>
+					</tr>
+				</table>
+
+		</div>
+		<div data-role="collapsible" data-collapsed="true" >
+
+			  <h3>Playlist</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Sonos7', 'Sonos.WZ.Play.Playlist', 'pics/radio/t.png', 'tim', 'midi') }}
+							{{ multimedia.station('Sonos8', 'Sonos.WZ.Play.Playlist', 'pics/radio/j.png', 'jana', 'midi') }}				
+						</td>
+					</tr>
+				</table>
+
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+

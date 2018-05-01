@@ -1,0 +1,28 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<div class="block">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Rollo</h3>
+				{% import "widget_shutter.html" as shutter %}
+				{{ shutter.one ('KZ1.RA.Rollo.sw', 'Rollo', 'KZ1.RA.Rollo.sw.move', 'KZ1.RA.Rollo.sw.stop', 'KZ1.RA.Rollo.sw.pos', '') }}
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}
+

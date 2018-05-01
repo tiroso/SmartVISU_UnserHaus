@@ -1,0 +1,77 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% import "widget_ddtlabs_hm.html" as ddtlabs_hm %}
+
+{% block content %}
+
+
+<h1><img class="icon" src='{{ icon0 }}scene_stairs.svg'/>Flure und Nebenräume</h1>
+
+
+ <div class="block">
+	 <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		 <div data-role="collapsible" data-collapsed="false" >
+
+			  <h3>Lichter</h3>
+
+				<table width=100%>
+					<tr>
+						<td align=middle width=100 style='padding-top:10px;padding-bottom:10px;'>
+							{{ basic.dual('FL.Treppenhaus.dual', 'FL.Treppenhaus.dual.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+						</td>
+						<td align=left>
+							Treppenhaus
+						</td>
+						<td align=middle width=100 style='padding-top:10px;padding-bottom:10px;'>
+							
+						</td>
+						<td align=left>
+							
+						</td>
+					</tr>
+
+				</table>
+		</div>
+	</div>
+ </div>
+
+	<div class="block">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Freigaben BM's und MK's</h3>
+				<table width=100%>
+					<tr>
+						<td align=middle width=100 style='padding-top:10px;padding-bottom:10px;'>
+							{{ basic.dual('FGBMTürGarten', 'XX.ST.BMTuereGarten.switch', 'message_presence_active.svg', 'message_presence_disabled.svg', '1', '0', 'midi') }}
+						</td>
+						<td align=left>
+							Tür Garten
+						</td>
+						<td align=middle width=100 style='padding-top:10px;padding-bottom:10px;'>
+							{{ basic.dual('FGLichtTimerFlurEG', 'XX.ST.TreppenbeleuchtungEGAutoAus.switch', 'time_timer.svg', 'time_timer.svg', '1', '0', 'midi') }}
+						</td>
+						<td align=left>
+							Timer Licht Flur
+						</td>
+					</tr>
+
+				</table>
+
+			</div>
+		</div>
+	</div>
+
+
+
+{% endblock %}
+

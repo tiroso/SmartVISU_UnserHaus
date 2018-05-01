@@ -1,0 +1,52 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% import "widget_ddtlabs_hm.html" as ddtlabs_hm %}
+
+{% block content %}
+
+
+<h1><img class="icon" src='{{ icon0 }}scene_garden.svg'/>Garten</h1>
+
+
+ <div class="block">
+	 <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		 <div data-role="collapsible" data-collapsed="false" >
+
+			  <h3>Lichter</h3>
+			 <table width=100%>
+			<tr>
+				<td width=50%>
+			 	{{ basic.dual('GA.Lichterkette.dual', 'GA.Lichterkette.dual.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+				</td>
+				<td>
+				Lichterkette
+				</td>
+			</tr>
+			<tr>
+				<td width=50%>
+			 	{{ basic.dual('GA.Laterne.dual', 'GA.Laterne.dual.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+				</td>
+				<td>
+				Laterne
+				</td>
+			</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+{% endblock %}
+

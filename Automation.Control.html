@@ -1,0 +1,537 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+	<div class="block">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Rollo Automation</h3>
+				<table width=100%>
+					<tr>
+						<td colspan=2>
+							Alle Rollos
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Ein/aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('RolloAutomationHaus', 'RolloAutomationHaus') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Erdgeschoss Rollos
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('RolloAutomationErdgeschoss', 'RolloAutomationErdgeschoss') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Obergeschoss Rollos
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('RolloAutomationObergeschoss', 'RolloAutomationObergeschoss') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Wohnzimmer Rollos
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('WZSunsetActivate', 'WZSunsetActivate') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<table width=100%>
+								<tr>
+									<td>
+										Frühestens
+									</td>
+									<td>
+										{{ basic.value('WZSunsetType5', 'WZSunsetType') }}
+									</td>
+									<td>
+										Spätestens
+									</td>
+								<tr>
+								</tr>
+									<td>
+										{{ basic.value('WZSunsetEarliest2', 'WZSunsetEarliest2') }}
+									</td>
+									<td>
+										{{ basic.value('WZSunsetTime', 'WZSunsetTime') }}
+									</td>
+									<td>
+										{{ basic.value('WZSunsetLatest2', 'WZSunsetLatest2') }}
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Typ
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.button('WZSunsetType1', 'WZSunsetType', 'REAL', '', 'REAL') }}
+								{{ basic.button('WZSunsetType2', 'WZSunsetType', 'CIVIL', '', 'CIVIL') }}
+								{{ basic.button('WZSunsetType3', 'WZSunsetType', 'NAUTIC', '', 'NAUTIC') }}
+								{{ basic.button('WZSunsetType4', 'WZSunsetType', 'ASTRONOMIC', '', 'ASTRONOMIC') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Frühestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('WZSunsetEarliest', 'WZSunsetEarliest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Spätestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('WZSunsetLatest', 'WZSunsetLatest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Küche Rollo
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('KUSunsetActivate', 'KUSunsetActivate') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<table width=100%>
+								<tr>
+									<td>
+										Frühestens
+									</td>
+									<td>
+										{{ basic.value('KUSunsetType5', 'KUSunsetType') }}
+									</td>
+									<td>
+										Spätestens
+									</td>
+								<tr>
+								</tr>
+									<td>
+										{{ basic.value('KUSunsetEarliest2', 'KUSunsetEarliest2') }}
+									</td>
+									<td>
+										{{ basic.value('KUSunsetTime', 'KUSunsetTime') }}
+									</td>
+									<td>
+										{{ basic.value('KUSunsetLatest2', 'KUSunsetLatest2') }}
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Typ
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.button('KUSunsetType1', 'KUSunsetType', 'REAL', '', 'REAL') }}
+								{{ basic.button('KUSunsetType2', 'KUSunsetType', 'CIVIL', '', 'CIVIL') }}
+								{{ basic.button('KUSunsetType3', 'KUSunsetType', 'NAUTIC', '', 'NAUTIC') }}
+								{{ basic.button('KUSunsetType4', 'KUSunsetType', 'ASTRONOMIC', '', 'ASTRONOMIC') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Frühestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('KUSunsetEarliest', 'KUSunsetEarliest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Spätestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('KUSunsetLatest', 'KUSunsetLatest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Emma Zimmer Rollo
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('KZ1SunsetActivate', 'KZ1SunsetActivate') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<table width=100%>
+								<tr>
+									<td>
+										Frühestens
+									</td>
+									<td>
+										{{ basic.value('KZ1SunsetType5', 'KZ1SunsetType') }}
+									</td>
+									<td>
+										Spätestens
+									</td>
+								<tr>
+								</tr>
+									<td>
+										{{ basic.value('KZ1SunsetEarliest2', 'KZ1SunsetEarliest2') }}
+									</td>
+									<td>
+										{{ basic.value('KZ1SunsetTime', 'KZ1SunsetTime') }}
+									</td>
+									<td>
+										{{ basic.value('KZ1SunsetLatest2', 'KZ1SunsetLatest2') }}
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Typ
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.button('KZ1SunsetType1', 'KZ1SunsetType', 'REAL', '', 'REAL') }}
+								{{ basic.button('KZ1SunsetType2', 'KZ1SunsetType', 'CIVIL', '', 'CIVIL') }}
+								{{ basic.button('KZ1SunsetType3', 'KZ1SunsetType', 'NAUTIC', '', 'NAUTIC') }}
+								{{ basic.button('KZ1SunsetType4', 'KZ1SunsetType', 'ASTRONOMIC', '', 'ASTRONOMIC') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Frühestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('KZ1SunsetEarliest', 'KZ1SunsetEarliest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Spätestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('KZ1SunsetLatest', 'KZ1SunsetLatest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Paula Zimmer Rollo
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('KZ2SunsetActivate', 'KZ2SunsetActivate') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<table width=100%>
+								<tr>
+									<td>
+										Frühestens
+									</td>
+									<td>
+										{{ basic.value('KZ2SunsetType5', 'KZ2SunsetType') }}
+									</td>
+									<td>
+										Spätestens
+									</td>
+								<tr>
+								</tr>
+									<td>
+										{{ basic.value('KZ2SunsetEarliest2', 'KZ2SunsetEarliest2') }}
+									</td>
+									<td>
+										{{ basic.value('KZ2SunsetTime', 'KZ2SunsetTime') }}
+									</td>
+									<td>
+										{{ basic.value('KZ2SunsetLatest2', 'KZ2SunsetLatest2') }}
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Typ
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.button('KZ2SunsetType1', 'KZ2SunsetType', 'REAL', '', 'REAL') }}
+								{{ basic.button('KZ2SunsetType2', 'KZ2SunsetType', 'CIVIL', '', 'CIVIL') }}
+								{{ basic.button('KZ2SunsetType3', 'KZ2SunsetType', 'NAUTIC', '', 'NAUTIC') }}
+								{{ basic.button('KZ2SunsetType4', 'KZ2SunsetType', 'ASTRONOMIC', '', 'ASTRONOMIC') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Frühestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('KZ2SunsetEarliest', 'KZ2SunsetEarliest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Spätestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('KZ2SunsetLatest', 'KZ2SunsetLatest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							Ankleidezimmer Rollo
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Ein/Aus
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('AKZSunsetActivate', 'AKZSunsetActivate') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<table width=100%>
+								<tr>
+									<td>
+										Frühestens
+									</td>
+									<td>
+										{{ basic.value('AKZSunsetType5', 'AKZSunsetType') }}
+									</td>
+									<td>
+										Spätestens
+									</td>
+								<tr>
+								</tr>
+									<td>
+										{{ basic.value('AKZSunsetEarliest2', 'AKZSunsetEarliest2') }}
+									</td>
+									<td>
+										{{ basic.value('AKZSunsetTime', 'AKZSunsetTime') }}
+									</td>
+									<td>
+										{{ basic.value('AKZSunsetLatest2', 'AKZSunsetLatest2') }}
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Typ
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.button('AKZSunsetType1', 'AKZSunsetType', 'REAL', '', 'REAL') }}
+								{{ basic.button('AKZSunsetType2', 'AKZSunsetType', 'CIVIL', '', 'CIVIL') }}
+								{{ basic.button('AKZSunsetType3', 'AKZSunsetType', 'NAUTIC', '', 'NAUTIC') }}
+								{{ basic.button('AKZSunsetType4', 'AKZSunsetType', 'ASTRONOMIC', '', 'ASTRONOMIC') }}
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Frühestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('AKZSunsetEarliest', 'AKZSunsetEarliest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td width=30%>
+							Sonnenuntergang Spätestens
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							{{ basic.slider('AKZSunsetLatest', 'AKZSunsetLatest', 0, 1440, 1) }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<hr>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="block">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Licht Automation</h3>
+				<table width=100%>
+					<tr>
+						<td>
+							Alle Rollos
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.flip('XX.RA.RollaAlle', 'XX.RA.RollaAlle') }}
+							</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</div>
+	
+	
+
+{% endblock %}
+

@@ -1,0 +1,207 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+<ul data-role="listview" data-dividertheme="c">
+
+	<li data-icon="false">
+		<a href="index.php?page=Rollo.Control">
+			<img class="icon" src="{{ icon0 }}fts_shutter_30.svg" />
+
+			<h3>Rollosteuerung</h3>
+
+		</a>
+	</li>
+        <li data-icon="false">
+		<a href="index.php?page=Light.Control">
+			<img class="icon" src="{{ icon0 }}light_ceiling_light.svg" />
+
+			<h3>Lichtersteuerung</h3>
+
+		</a>
+	</li>
+	<li data-role="list-divider">Gebaude </li>
+	<li data-role="list-divider">Erdgeschoss</li>
+	<li data-icon="false">
+		<a href="index.php?page=EG.Wohnzimmer">
+			<img class="icon" src="{{ icon0 }}scene_livingroom.svg" />
+
+			<h3>Wohnzimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturWohnzimmer', 'EG.Wandthermostat.rtr_Clima.measured-temp', '°C') }} <br />
+				{{ basic.symbol('FensterrechtsWohnzimmer', 'KU.FS.1.read.state', '', 'fts_window_1w_open.svg', 'open', '', 'icon1') }}
+                {{ basic.symbol('dfghjksdcsdcsdcsdcddddd', ['KU.FS.1.read.state', 'WZ.FS.1.read.state'], '', ['fts_window_1w_open.svg','fts_window_1w_open.svg'], ['open','open'], 'or', ['icon1','icon1']) }}
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Kueche">
+			<img class="icon" src="{{ icon0 }}scene_dinner.svg" />
+
+			<h3>Küche</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturKueche', 'EG.Wandthermostat.rtr_Clima.measured-temp', '°C') }} <br />
+				{{ basic.symbol('FensterKueche', 'KU.Fenstersensor.symbol.state', '', 'fts_window_1w_open.svg', 'open', '', 'icon1') }}
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Flur">
+			<img class="icon" src="{{ icon0 }}scene_stairs.svg" />
+
+			<h3>Flure und Nebenräume</h3>
+
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Garten">
+			<img class="icon" src="{{ icon0 }}scene_garden.svg" />
+
+			<h3>Garten</h3>
+
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Esszimmer">
+			<img class="icon" src="{{ icon0 }}scene_toilet.svg" />
+
+			<h3>Bad</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturBadEG', 'KBZ.Heizung.rtr_Clima.measured-temp', '°C') }} <br />
+				{{ basic.symbol('FensterKBZ', 'KBZ.Fenstersensor.symbol.state', '', 'fts_window_1w_open.svg', 'open', '', 'icon1') }}
+			</div>
+		</a>
+	</li>
+
+	<li data-role="list-divider">Obergeschoss</li>
+	<li data-icon="false">
+		<a href="index.php?page=OG.EmmaZimmer">
+			<img class="icon" src="{{ icon0 }}scene_childs_room.svg" />
+
+			<h3>Emma Zimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturEmmaZimmer', 'KZ.HeizungEmma.rtr_Clima.measured-temp', '°C') }} <br />
+				{{ basic.symbol('FensterEmmaZimmer', 'KZ.FenstersensorEmma.symbol.state', '', 'fts_window_1w_open.svg', 'open', '', 'icon1') }}
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=OG.PaulaZimmer">
+			<img class="icon" src="{{ icon0 }}scene_childs_room.svg" />
+
+			<h3>Paula Zimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturPaulaZimmer', 'KZ.HeizungPaula.rtr_Clima.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=OG.Ankleidezimmer">
+			<img class="icon" src="{{ icon0 }}scene_dressing_room.svg" />
+
+			<h3>Ankleidezimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturAnkleideZimmer', 'AKZ.Heizung.rtr_Clima.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Esszimmer">
+			<img class="icon" src="{{ icon0 }}scene_toilet.svg" />
+
+			<h3>Badezimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturBad1G', 'MBZ.Heizung.rtr_Clima.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+
+	<li data-role="list-divider">Dachgeschoss</li>
+	<li data-icon="false">
+		<a href="index.php?page=EG.Esszimmer">
+			<img class="icon" src="{{ icon0 }}scene_sleeping_twin_1_1.svg" />
+
+			<h3>Schlafzimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturSchlafZimmer', 'sZ.Heizung.rtr_Clima.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Esszimmer">
+			<img class="icon" src="{{ icon0 }}scene_workshop.svg" />
+
+			<h3>Nähzimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturNaehZimmer', 'NZ.Heizung.rtr_Clima.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+
+	<li data-icon="false">
+		<a href="index.php?page=EG.Esszimmer">
+			<img class="icon" src="{{ icon0 }}scene_bathroom.svg" />
+
+			<h3>Badezimmer</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturBadezimmergroßZimmer', 'GBZ.Heizung.rtr_Clima.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+
+	<li data-role="list-divider">Keller</li>
+	<li data-icon="false">
+		<a href="index.php?page=EG.Esszimmer">
+			<img class="icon" src="{{ icon0 }}scene_laundry_room_fem.svg" />
+
+			<h3>Keller</h3>
+
+			<div class="ui-li-aside">
+				{{ basic.float('TemperaturKeller', 'KL.Temperatur.measured-temp', '°C') }} <br />
+			</div>
+		</a>
+	</li>
+	<li data-role="list-divider">Zusammenfassung</li>
+	<li data-icon="false">
+		<a href="index.php?page=Rollo.Control">
+			<img class="icon" src="{{ icon0 }}scene_garden.svg" />
+
+			<h3>Rollosteuerung</h3>
+
+		</a>
+	</li>
+	<li data-icon="false">
+		<a href="index.php?page=Automation.Control">
+			<img class="icon" src="{{ icon0 }}scene_garden.svg" />
+
+			<h3>Automation</h3>
+
+		</a>
+	</li>
+</ul>	
+
+

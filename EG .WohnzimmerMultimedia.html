@@ -1,0 +1,62 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+
+<div data-role="navbar">
+		<ul>
+			<li>
+				<a href="index.php?page=EG.Wohnzimmer" id="WohnzimmerStandart">
+					<div >
+						<div><img class="icon" style="width:24px;height:24px;" src='{{ icon0 }}scene_livingroom.svg'/></div> 
+						<div style="font-size:16px;">Wohnzimmer </div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="index.php?page=EG.WohnzimmerMultimedia" class="ui-btn-active" id="WohzimmerMultimedia">
+					<div style="padding:0px;" >
+						<div><img class="icon" style="width:24px;height:24px;" src='{{ icon0 }}it_television.svg'/></div> 
+						<div style="font-size:16px;">Multimedia </div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+
+<h1><img class="icon" src='{{ icon0 }}scene_livingroom.svg'/>Wohnzimmer</h1>
+
+ <div class="block">
+	 <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		 <div data-role="collapsible" data-collapsed="false" >
+
+			  <h3>Bev. Filme</h3>
+			
+			<table width="100%">
+					<tr>
+						<td align="middle" width="100%">
+							{{ multimedia.station('Movie1', 'EG.movie.id', 'pics/movie/frozen.jpeg', '123456', 'midi') }}	TEST					
+						</td>
+					</tr>
+				</table>
+
+		</div>
+	</div>
+</div>
+
+				
+
+
+{% endblock %}
+

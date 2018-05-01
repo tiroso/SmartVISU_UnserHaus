@@ -1,0 +1,59 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% import "widget_ddtlabs_hm.html" as ddtlabs_hm %}
+
+{% block content %}
+
+
+<h1><img class="icon" src='{{ icon0 }}light_ceiling_light.svg'/>Einstellung Licht Treppenhaus</h1>
+
+<table width=100%>
+	<tr>
+		<td align=middle width=100 style='padding-top:10px;padding-bottom:10px;'>
+			{{ basic.flip('flip1', 'LightAutomation.2.Var.1.both.flip', 'on', 'off') }}
+		</td>
+		<td align=left>
+			Treppenhaus automatisch einschalten
+		</td>
+	</tr>
+	<tr>
+		<td align=middle width=100 style='padding-top:10px;padding-bottom:10px;'>
+			{{ basic.flip('flip2', 'LightAutomation.2.Var.2.both.flip', 'on', 'off') }}
+		</td>
+		<td align=left>
+			Treppenhaus automatisch ausschalten 
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2>
+			<hr>
+		</td>
+	</tr>
+	<tr>
+		<td align=middle colspan=2>
+			<a href="javascript:history.back()">Zurück</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2>
+			<hr>
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+{% endblock %}
+

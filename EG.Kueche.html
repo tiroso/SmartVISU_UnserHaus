@@ -1,0 +1,104 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% import "widget_ddtlabs_hm.html" as ddtlabs_hm %}
+
+{% block content %}
+
+
+<h1><img class="icon" src='{{ icon0 }}scene_dinner.svg'/>Küche</h1>
+
+
+<div class="block">
+    <div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+        <div data-role="collapsible" data-collapsed="false" >
+            <h3>Lichter</h3>
+            <table width=100%>
+                <tr>
+                    <td width=50%>
+                        {{ basic.dual('KU.SA.1', 'KU.SA.1.both.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+                    </td>
+                    <td>
+                        Deckenlampe
+                    </td>
+                </tr>
+                <tr>
+                    <td width=50%>
+                        {{ basic.dual('KU.SA.2', 'KU.SA.2.both.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+                    </td>
+                    <td>
+                        Küchenzeile
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+		<div class="set-2" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Rollo</h3>
+				<table width=100%>
+                    <tr>
+                        <td>
+							Rollo
+						</td>
+						<td>
+							<span data-role="controlgroup" data-type="horizontal"> 
+								{{ basic.button('KU.RA.1.hoch', 'KU.RA.1.direct', '', 'control_arrow_up.svg', 'off', 'mini') }}
+								{{ basic.button('KU.RA.1.runter', 'KU.RA.1.direct', '', 'control_arrow_down.svg', 'on', 'mini') }}
+								{{ basic.button('KU.RA.1.stop', 'KU.RA.1.direct', '', 'audio_stop.svg', 'stop', 'mini') }}
+							</span>
+                            <span data-role="controlgroup" data-type="horizontal"> 
+                                <a href="#ku1pct" data-rel="popup">
+                                    <img class="icon icon1" style = "fill:icon1; stroke:icon1;" src="{{ icon0 }}fts_shutter_30.svg" /> 
+                                </a>
+                                <div id="ku1pct" data-role="popup">
+                                    <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <span data-role="controlgroup" data-type="horizontal"> 
+                                                    {{ basic.button('KU.RA.1.pct1', 'KU.RA.1.direct', '10%', '', 'pct 10', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct2', 'KU.RA.1.direct', '20%', '', 'pct 20', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct3', 'KU.RA.1.direct', '30%', '', 'pct 30', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct4', 'KU.RA.1.direct', '40%', '', 'pct 40', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct5', 'KU.RA.1.direct', '50%', '', 'pct 50', 'mini') }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span data-role="controlgroup" data-type="horizontal"> 
+                                                    {{ basic.button('KU.RA.1.pct6', 'KU.RA.1.direct', '60%', '', 'pct 60', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct7', 'KU.RA.1.direct', '70%', '', 'pct 70', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct8', 'KU.RA.1.direct', '80%', '', 'pct 80', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct9', 'KU.RA.1.direct', '90%', '', 'pct 90', 'mini') }}
+                                                    {{ basic.button('KU.RA.1.pct10', 'KU.RA.1.direct', '100%', '', 'pct 100', 'mini') }}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </span>
+						</td>
+					</tr>
+                </table>
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}
+

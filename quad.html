@@ -1,0 +1,193 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "base.html" %}
+{% block content %}
+
+	<div class="quad2">
+						
+	<ul data-role="listview" data-dividertheme="c" class="tiles ui-listview">
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-first-child ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=licht" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/light_light.png">
+
+				<h3 class="ui-li-heading">Licht</h3>
+
+				<div class="ui-ri-aside">
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=rollos" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/fts_shutter_50.png">
+
+				<h3 class="ui-li-heading">Rollos</h3>
+
+				<div class="ui-ri-aside">
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=heizung" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/sani_heating.png">
+
+				<h3 class="ui-li-heading">Heizung</h3>
+
+				<div class="ui-ri-aside">
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=eg.kueche" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_cooking.png">
+
+				<h3 class="ui-li-heading">Kochen</h3>
+
+				<div class="ui-ri-aside">
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=eg.essen" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_dinner.png">
+
+				<h3 class="ui-li-heading">Essen</h3>
+
+				<div class="ui-ri-aside">
+					
+	<span id="design_quad-NaviTuerEssen" data-widget="basic.symbol" data-item="eg.essen.terrassentuer.rechts" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/fts_door_open.png"></span>
+
+
+					
+	<span id="design_quad-NaviTuerEssenFreigabe" data-widget="basic.symbol" data-item="eg.essen.terrassentuer.auto_off" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/secur_locked.png"></span>
+
+
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=eg.wohnen" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/it_television.png">
+
+				<h3 class="ui-li-heading">Wohnen</h3>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=aa.garten" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_garden.png">
+
+				<h3 class="ui-li-heading">Garten</h3>
+
+				<div class="ui-ri-aside">
+				</div>
+			</a>
+		</div></div></li>
+
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-icon-right ui-li ui-li-has-thumb ui-btn-up-a"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=dg.schlafen" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_sleeping.png">
+
+				<h3 class="ui-li-heading">Schlafen</h3>
+
+				<div class="ui-ri-aside">
+					
+	<span id="design_quad-navi_modus_schlafen" data-widget="basic.symbol" data-item="modus.schlafen" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/scene_sleeping.png"></span>
+
+
+					
+	<span id="design_quad-navi_dg_schlafen_audio" data-widget="basic.symbol" data-item="dg.schlafen.audio" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/audio_volume_high.png"></span>
+
+
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=dg.ankleide" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_dressing_room.png">
+
+				<h3 class="ui-li-heading">Ankleide</h3>
+
+				<div class="ui-ri-aside">
+					
+	<span id="design_quad-navi_modus_schlafen_ankleide" data-widget="basic.symbol" data-item="modus.schlafen" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/scene_sleeping.png"></span>
+
+
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=dg.masterbad" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_bathroom.png">
+
+				<h3 class="ui-li-heading">Masterbad</h3>
+
+				<div class="ui-ri-aside">
+					
+	<span id="design_quad-navi_dg_masterbad_fenster_geschlossen" data-widget="basic.symbol" data-item="dg.masterbad.fenster.geschlossen" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/fts_window_2w_open_l.png"></span>
+
+
+					
+	<span id="design_quad-navi_modus_schlafen_masterbad" data-widget="basic.symbol" data-item="modus.schlafen.beide" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/scene_sleeping.png"></span>
+
+
+					
+	<span id="design_quad-navi_dg_masterbad_audio" data-widget="basic.symbol" data-item="dg.masterbad.audio" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/audio_volume_high.png"></span>
+
+
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=dg.arbeiten" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_office.png">
+
+				<h3 class="ui-li-heading">Arbeiten</h3>
+
+				<div class="ui-ri-aside">
+				</div>
+			</a>
+		</div></div></li>
+		<li data-icon="false" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-iconpos="right" data-theme="a" class="ui-btn ui-btn-up-a ui-btn-icon-right ui-li ui-li-has-thumb ui-last-child"><div class="ui-btn-inner ui-li"><div class="ui-btn-text">
+			<a href="index.php?page=dg.zimmer1" class="ui-link-inherit">
+				<img class="icon ui-li-thumb" src="icons/ws/scene_childs_room.png">
+
+				<h3 class="ui-li-heading">Hunde</h3>
+
+				<div class="ui-ri-aside">
+					
+	<span id="design_quad-navi_dg_zimmer1_rollladen_sperre" data-widget="basic.symbol" data-item="dg.zimmer1.rollladen.sperre" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/secur_locked.png"></span>
+
+
+					
+	<span id="design_quad-navi_dg_zimmer1_audio" data-widget="basic.symbol" data-item="dg.zimmer1.audio" data-val="1" data-mode="or" class="symbol hide">
+        <img class="icon" src="icons/or/audio_volume_high.png"></span>
+
+
+				</div>
+			</a>
+		</div></div></li>
+
+	</ul>
+
+					</div>
+	
+	
+
+{% endblock %}
+

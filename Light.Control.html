@@ -1,0 +1,102 @@
+/**
+* -----------------------------------------------------------------------------
+* @package     smartVISU
+* @author      Martin Gleiß
+* @copyright   2012 - 2015
+* @license     GPL [http://www.gnu.de]
+* -----------------------------------------------------------------------------
+*/
+
+
+{% extends "rooms.html" %}
+
+{% block content %}
+
+<h1><img class="icon" src='{{ icon0 }}light_ceiling_light.svg'/>Lichter Steuerung</h1>
+
+<div class="block">
+	<div class="set-3" data-role="collapsible-set" data-theme="c" data-content-theme="a" data-mini="true">
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Wohnzimmer</h3>
+			<table width=100%>
+				<tr>
+					<td colspan=2>
+					 	{{ device.dimmer('dimmer1', 'Stehlampe', 'WZ.DM.1.1.both.switch', 'WZ.DM.1.1.both.pct', 0, 100, 5) }}
+					</td>
+				</tr>
+		            	<tr>
+					<td colspan=2>
+					 	{{ device.dimmer('dimmer2', 'Wandbeleuchtung', 'WZ.DM.2.1.both.switch', 'WZ.DM.2.1.both.pct', 0, 100, 5) }}
+					</td>
+				</tr>
+		            	<tr>
+					<td width=50%>
+					 	Ecklampe
+					</td>
+					<td>
+						{{ basic.dual('dual1', 'WZ.SA.1.both.switch', 'light_standing_light.svg', 'light_standing_light.svg', '1', '0', 'midi') }}
+					</td>
+				</tr>
+				<tr>
+					<td width=50%>
+					 	Tiffany Lampe
+					</td>
+					<td>
+						{{ basic.dual('dual2', 'WZ.SA.2.both.switch', 'light_standing_light.svg', 'light_standing_light.svg', '1', '0', 'midi') }}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Küche</h3>
+			<table width=100%>
+				<tr>
+					<td width=50%>
+					 	Deckenlampe
+					</td>
+					<td>
+						{{ basic.dual('dual3', 'KU.SA.1.both.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+					</td>
+				</tr>
+				<tr>
+					<td width=50%>
+						Küchenzeile
+					</td>
+					<td>
+						{{ basic.dual('dual4', 'KU.SA.2.both.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Emmas Zimmer</h3>
+			<table width=100%>
+				<tr>
+					<td width=50%>
+						<a href="index.php?page=KZ1.SA.1">Lichterkette</a>
+					</td>
+					<td>
+						{{ basic.dual('dual5', 'KZ1.SA.1.both.switch', 'light_ceiling_light.svg', 'light_ceiling_light.svg', '1', '0', 'midi') }}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div data-role="collapsible" data-collapsed="true">
+			<h3>Flur</h3>
+			<table width=100%>
+				<tr>
+					<td width=50%>
+						<a href="index.php?page=FL.SA.1">Treppenhaus</a>
+					</td>
+					<td>
+						{{ basic.dual('dual6', 'FL.SA.1.both.switch', 'light_stairs.svg', 'light_stairs.svg', '1', '0', 'midi') }}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>	
+	
+
+{% endblock %}
+
